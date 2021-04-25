@@ -7,3 +7,4 @@ video/
 
 # Django, DB
 db.sqlite3
+.idea/

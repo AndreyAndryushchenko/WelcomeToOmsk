@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block title %}{{ sight.sight_name }}{% endblock %}
+
+{% block content %}
+    <!-- main-page -->
+    <div>
+        <img class="main-image" src="../static/website/img/{{ sight.sight_photo }}" alt="{{ sight.sight_name }}">
+        <div class="block-one">
+            <span class="sight-name">{{ sight.sight_name }}</span>
+            <div class="line"></div>
+            <span class="description">{{ sight.sight_description }}</span>
+        </div>
+        <div class="address">
+            <img src="{% static 'website/img/location.svg' %}" alt="location">
+            <span>{{ sight.sight_address }}</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="second-page">
+            <span class="main-description">Описание</span>
+            <div class="line-2"></div>
+            <span class="text">{{ sight.sight_history }}</span>
+            <p class="photos">Карта</p>
+            <div class="line-3"></div>
+            <iframe src="{{ sight.sight_link }}" width="1100" height="450" style="border:0;" allowfullscreen="false"
+                    loading="lazy" class="map"></iframe>
+        </div>
+    </div>
+{% endblock %}

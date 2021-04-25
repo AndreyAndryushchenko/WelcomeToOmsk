@@ -1,3 +1,258 @@
 {% extends 'index.html' %}
 
-{% block title %}Welcome to Omsk{% endblock %}
+{% load static %}
+
+{% block content %}
+    <!-- main-page -->
+    <div class="main-page">
+        <!-- header -->
+        <header class="header-block no-scroll">
+            <p class="english-version">English version</p>
+            <div class="welcome-to-omsk-header wow heartBeat" data-wow-duration="1.0s">Welcome to Omsk</div>
+            <nav class="top-menu">
+                <ul>
+                    <li><a href="#">Welcome</a></li>
+                    <li>
+                        <a href="#"><i class="fas fa-caret-down"></i>Меню</a>
+                        <ul>
+                            <li><a href="#leisure">Досуг</a></li>
+                            <li><a href="#sights">Достопримечательности</a></li>
+                            <li><a href="#sport">Спорт</a></li>
+                            <li><a href="#video">Город на видео</a></li>
+                            <li><a href="#map">Как добраться</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#contact">Связь с нами</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+        <!-- square -->
+        <div class="square wow fadeIn" data-wow-duration="1.0s" data-wow-delay="0.5s">
+            <span class="gid">Гид по самому солнечному городу</span>
+            <span class="siberia">СИБИРИ</span>
+        </div>
+        <!-- /.square -->
+
+        <div class="layers">
+            <div class="location">
+                <div class="triangles">
+                    <img src="{% static 'website/img/triangle.png' %}" alt="triangle1">
+                </div>
+                <div class="siberia-russia wow wobble" data-wow-duration="0.5s">
+                    <img src="{% static 'website/img/location.svg' %}" alt="location">
+                    <span>Siberia, Russia</span>
+                </div>
+                <div class="triangles">
+                    <img src="{% static 'website/img/triangle2.png' %}" alt="triangle2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- under the main page -->
+    <div id="leisure" class="under-the-main-page wow bounceInDown" data-wow-duration="1.0s">
+        <div class="cards">
+            <div class="card">
+                <img src="{% static 'website/img/history-parks.png' %}" alt="history-parks" class="card-image">
+                <span class="card-text">Исторические парки</span>
+            </div>
+            <div class="card">
+                <img src="{% static 'website/img/hotels_and_restaurants.png' %}" alt="hotels and restaurants"
+                     class="card-image">
+                <span class="card-text">Отели и рестораны</span>
+            </div>
+            <div class="card">
+                <img src="{% static 'website/img/fountains_and_squares.png' %}" alt="fountains and squares"
+                     class="card-image">
+                <span class="card-text">Фонтаны и скверы</span>
+            </div>
+            <div class="card">
+                <img src="{% static 'website/img/bicycle.png' %}" alt="bicycle" class="card-image">
+                <span class="card-text">10 км велодорожек</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- sights -->
+    <div class="container">
+        <div id="sights" class="sights">
+            <span class="heading-sights">Достопримечательности</span>
+            <div class="heading-line"></div>
+
+            <div class="swiper-container swiper-container-sight">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+
+                    {% for s in sights_list %}
+
+                        <div class="swiper-slide swiper-slide-sight">
+                            <a href="{% url 'website:detail' s.id %}" class="sight">
+                                <img src="static/website/img/{{ s.sight_photo }}" alt="{{ s.sight_name }}"
+                                     class="sight-img"/>
+                                <p class="caption">{{ s.sight_name }}</p>
+                            </a>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+                <div class="sight-pagination sport-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sport -->
+    <div class="container">
+        <div id="sport" class="sport">
+            <span class="heading-sports">Спорт в городе</span>
+            <div class="heading-line-sport"></div>
+            <!-- swiper -->
+            <div class="swiper-container swiper-container-sport">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/hockey.jpg' %}" alt="sight1.png"/>
+                            <p class="caption-sport">Хоккей</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/football.jpg' %}" alt=""/>
+                            <p class="caption-sport">Футбол</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/basketball.jpg' %}" alt=""/>
+                            <p class="caption-sport">Баскетбол</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/volleyball.jpg' %}" alt=""/>
+                            <p class="caption-sport">Волейбол</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/swimming.jpg' %}" alt=""/>
+                            <p class="caption-sport">Плавание</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/athletics.jpg' %}" alt=""/>
+                            <p class="caption-sport">Легкая атлетика</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide-sport swiper-slide-sport">
+                        <div class="sport-block">
+                            <img class="sport-image" src="{% static 'website/img/tennis.jpg' %}" alt=""/>
+                            <p class="caption-sport">Теннис</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="sport-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- video -->
+    <div class="container">
+        <div class="video-omsk">
+            <span id="video" class="Omsk-on-video">Омск на видео</span>
+            <div class="heading-line-video"></div>
+            <iframe width="1100px" height="618px" src="https://www.youtube.com/embed/2E2MfYOsLEw" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- map -->
+    <div class="container">
+        <span id="map" class="city-on-the-map">Город на карте</span>
+        <div class="heading-line-map"></div>
+        <iframe class="google-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293029.0852536928!2d73.07596292408579!3d54.98555403173056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafde2f601090b%3A0x5eefc33861a69b1a!2z0J7QvNGB0LosINCe0LzRgdC60LDRjyDQvtCx0Lsu!5e0!3m2!1sru!2sru!4v1606675049897!5m2!1sru!2sru"
+                width="1100" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+    </div>
+
+    <!-- form -->
+    <div class="background-image2">
+        <div class="container">
+            <span id="contact" class="contact-us">Свяжись с нами</span><br>
+            <div class="heading-line-contact-us"></div>
+            <div class="form-struct">
+                <div class="text-block">
+                    <span class="have-questions">Есть вопросы или предложения по улучшению нашего сайта?</span>
+                    <span class="dont-share-info">*Мы никому не передаем ваши данные. И не сохраняем ваши адреса в базу.</span>
+                </div>
+                <form method="POST" class="blocks">
+                    {% csrf_token %}
+                    {{ form.name }}
+                    {{ form.email }}
+                    {{ form.message }}
+                    <button type="submit" name="submit-button">Отправить</button>
+                    <button type="button" name="reset-button">Очистить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="background-footer">
+        <div class="container">
+            <footer class="footer">
+                <div class="welcome-to-omsk-footer">Welcome to Omsk</div>
+                <div class="blocks-footer">
+                    <ul class="block1-footer">
+                        <li><a href="#">О городе</a></li>
+                        <li><a href="#sights">Достопримечательности</a></li>
+                        <li><a href="#leisure">Парки</a></li>
+                        <li><a href="#leisure">Скверы</a></li>
+                    </ul>
+                    <ul class="block2-footer">
+                        <li><a href="#leisure">Рестораны</a></li>
+                        <li><a href="#leisure">Отели</a></li>
+                        <li><a href="#leisure">Торговые комплексы</a></li>
+                        <li><a href="#sport">Спорт</a></li>
+                    </ul>
+                    <ul class="block3-footer">
+                        <li>
+                            <img src="{% static 'website/img/location.svg' %}" alt="">
+                            Omsk, Russia
+                        </li>
+                        <li>Предложения по улучшению сайта</li>
+                        <li>E-mail: ant.orlov.on@gmail.com</li>
+                        <li>
+                            <a href="#"><img src="{% static 'website/img/Vk.png' %}" alt="Vk"></a>
+                            <a href="#"><img src="{% static 'website/img/instagram.png' %}" alt="inst"></a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- black-line -->
+    <div class="background-black-line">
+        <div class="container">
+            <div class="class-text-black-line">
+          <span class="text-black-line"> 
+          Copyright 2020 - All Rights Reserved - Designed by Anton Orlov and Andrey Andryushenko
+          </span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

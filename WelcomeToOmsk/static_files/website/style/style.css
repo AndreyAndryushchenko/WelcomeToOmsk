@@ -69,7 +69,7 @@ body {
 }
 
 .top-menu > ul > li:last-child a{
-  width: 150px;
+  width: 125px;
 }
 
 .top-menu > ul li{
@@ -87,7 +87,7 @@ body {
 
 .top-menu li a:hover {
   background: #313D46;
-  color: black;
+  color: white;
   box-shadow: 1px 5px 10px -5px white;
   transition: all 0.3s ease;
 }
@@ -177,7 +177,7 @@ i {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  max-width: 1520px;
+  width: 1520px;
   margin-bottom: 20px;
   top: 5px;
 }
@@ -270,9 +270,7 @@ i {
 }
 
 .sight {
-  cursor: pointer;
-  margin: 0 10px 10px 0; 
-  padding: 10px 0; 
+  text-decoration: none;
 }
 
 .sight-img {
@@ -402,8 +400,9 @@ i {
   margin-bottom: 50px;
 }
 
-.text-block {
-  position: absolute;
+.form-struct {
+  display: flex;
+  justify-content: space-between;
 }
 
 .have-questions {
@@ -432,7 +431,6 @@ i {
 
 .blocks {
   position: relative;
-  float: right;
   max-width: 550px;
   width: 790px;
   display: flex;
@@ -784,18 +782,130 @@ button[name="reset-button"]:hover {
   background: linear-gradient(to left, rgba(0,0,0,.3), rgba(0,0,0,.0) 50%, rgba(0,0,0,.3)), linear-gradient(#d77d31, #fe8417, #d77d31);
 }
 
-.swiper-slide-sight {
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+
+/* Popup */
+
+.main-image {
+  height: 850px;
+  width: 100%;
+  background-size: 100%;
+  z-index: 1;
+}
+
+.block-one {
+  position: absolute;
+  left: 900px;
+  top: 72px;
+}
+
+.sight-name {
+  /* Успенский собор */
+  width: 432px;
+  height: 59px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  color: #D4C17F;
+}
+
+.line {
+  /* Line 1 */
+  width: 179px;
+  height: 0px;
+  margin: 0 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.description {
+  /* Православный храм в Омске, находящийся в самом центре города на Соборной площади. */
+  width: 442px;
+  height: 413px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 59px;
+  color: #FFFFFF;
+}
+
+.address {
+  /* ул. Тарская, 7, Омск */
+  position: absolute;
+  width: 232px;
+  height: 29px;
+  left: 900px;
+  top: 780px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.main-description {
+  /* Описание */
+  margin-top: 30px;
+  letter-spacing: 2.304px;
+  width: 162px;
+  height: 53px;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 53px;
+  color: #D4C17F;
+}
+
+.line-2 {
+  /* Line 2 */
+  width: 115px;
+  height: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+.text {
+  /* text for description */
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 24px;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+.photos {
+  margin-top: 30px;
+  width: 162px;
+  height: 53px;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 53px;
+  color: #D4C17F;
+}
+
+.line-3 {
+  /* Line 3 */
+  width: 115px;
+  height: 0px;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.map {
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
