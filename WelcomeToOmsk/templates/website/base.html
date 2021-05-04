@@ -19,7 +19,7 @@
                             <li><a href="#sights">Достопримечательности</a></li>
                             <li><a href="#sport">Спорт</a></li>
                             <li><a href="#video">Город на видео</a></li>
-                            <li><a href="#map">Как добраться</a></li>
+                            <li><a href="#map">Город на карте</a></li>
                         </ul>
                     </li>
                     <li>
@@ -56,23 +56,94 @@
     <!-- under the main page -->
     <div id="leisure" class="under-the-main-page wow bounceInDown" data-wow-duration="1.0s">
         <div class="cards">
-            <div class="card">
+            <a href="#popup_park" class="card">
                 <img src="{% static 'website/img/history-parks.png' %}" alt="history-parks" class="card-image">
                 <span class="card-text">Исторические парки</span>
+            </a>
+
+            <div id="popup_park" class="popup">
+                <a href="#leisure" class="popup__area"></a>
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#leisure" class="popup__close">X</a>
+                        <div class="popup__title">Парки и скверы</div>
+                        <div class="popup__text">
+                            Lorem Ipsum - это текст-"рыба",
+                            часто используемый в печати и вэб-дизайне.
+                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                            используя Lorem Ipsum для распечатки образцов.<br>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
+
+            <a href="#popup_hotel" class="card">
                 <img src="{% static 'website/img/hotels_and_restaurants.png' %}" alt="hotels and restaurants"
                      class="card-image">
                 <span class="card-text">Отели и рестораны</span>
+            </a>
+
+            <div id="popup_hotel" class="popup">
+                <a href="#leisure" class="popup__area"></a>
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#leisure" class="popup__close">X</a>
+                        <div class="popup__title">Отели и рестораны</div>
+                        <div class="popup__text">
+                            Lorem Ipsum - это текст-"рыба",
+                            часто используемый в печати и вэб-дизайне.
+                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                            используя Lorem Ipsum для распечатки образцов.<br>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
+
+            <a href="#popup_squares" class="card">
                 <img src="{% static 'website/img/fountains_and_squares.png' %}" alt="fountains and squares"
                      class="card-image">
                 <span class="card-text">Фонтаны и скверы</span>
+            </a>
+
+            <div id="popup_squares" class="popup">
+                <a href="#leisure" class="popup__area"></a>
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#leisure" class="popup__close">X</a>
+                        <div class="popup__title">Фонтаны и скверы</div>
+                        <div class="popup__text">
+                            Lorem Ipsum - это текст-"рыба",
+                            часто используемый в печати и вэб-дизайне.
+                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                            используя Lorem Ipsum для распечатки образцов.<br>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
+
+            <a href="#popup_bicycle" class="card">
                 <img src="{% static 'website/img/bicycle.png' %}" alt="bicycle" class="card-image">
                 <span class="card-text">10 км велодорожек</span>
+            </a>
+
+            <div id="popup_bicycle" class="popup">
+                <a href="#leisure" class="popup__area"></a>
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <a href="#leisure" class="popup__close">X</a>
+                        <div class="popup__title">10 км велодорожек</div>
+                        <div class="popup__text">
+                            Lorem Ipsum - это текст-"рыба",
+                            часто используемый в печати и вэб-дизайне.
+                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                            В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                            используя Lorem Ipsum для распечатки образцов.<br>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

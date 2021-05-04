@@ -19,7 +19,7 @@ def index(request):
 
             anton = 'ant.orlov.on@gmail.com'
 
-            recipients = ['jejovap533@gridmire.com']
+            recipients = [anton]
             try:
                 send_mail('Welcome to Omsk', result_message, 'welcometoomsk@mail.ru', recipients)
                 form = ContactForm()
