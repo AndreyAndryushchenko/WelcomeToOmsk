@@ -15,15 +15,15 @@ def index(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            result_message = message + '\n' + name + '\n' + email
+            result_message = f'{message}\nС уважением, {name}.\nПочта для связи со мной:\n{email}'
 
             anton = 'ant.orlov.on@gmail.com'
 
             recipients = [anton]
             try:
-                send_mail('Welcome to Omsk', result_message, 'welcometoomsk@mail.ru', recipients)
+                send_mail('Welcome to Omsk', result_message, 'welcometoomskbyomsu@mail.ru', recipients)
                 form = ContactForm()
-                return HttpResponseRedirect('/thanks/')
+                return HttpResponseRedirect('/')
             except BadHeaderError:  # Защита от уязвимости
                 return HttpResponse('Invalid header found')
     else:
@@ -44,7 +44,3 @@ def detail(request, sight_id):
         raise Http404('Запись о достопримечательности не найдена')
 
     return render(request, 'website/detail.html', {'sight': s})
-
-
-def thanks(request):
-    return render(request, 'website/thanks.html')

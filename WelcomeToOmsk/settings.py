@@ -129,6 +129,6 @@ STATICFILES_DIRS = (
 
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'smtp.mail.ru'  # Например, smtp.gmail.com
-EMAIL_HOST_USER = 'welcometoomsk@mail.ru'  # Например, user@gmail.com. Именно его необходимо указывать как ВАШ_EMAIL_ДЛЯ_ОТПРАВКИ_СООБЩЕНИЯ в исходном коде предыдущего пункта
+EMAIL_HOST_USER = 'welcometoomskbyomsu@mail.ru'  # Например, user@gmail.com. Именно его необходимо указывать как ВАШ_EMAIL_ДЛЯ_ОТПРАВКИ_СООБЩЕНИЯ в исходном коде предыдущего пункта
 EMAIL_HOST_PASSWORD = '#jw83n&%'
 EMAIL_PORT = 465
